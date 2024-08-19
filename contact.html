@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Contact</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">UPro <span>Fitness</span></a>
+
+        <nav>
+            <a href="index.html">Home</a>
+
+            <div class="dropdown">
+                <a href="fitness.html">Fitness <i class="fa-solid fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="about.html">About Us</a>
+                    <a href="signatureclass.html">Signature Classes</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="HealthTips.html">Health tips</a>
+            </div>
+
+
+            
+            <div class="dropdown">
+                <a href="wellnessRoutine.html">Well-routine</a>
+            </div>
+
+            <div class="dropdown">
+                <a href="#tools">Tools <i class="fa-solid fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="bmi.html">BMI Calculator</a>
+                    <a href="bmr.html">BMR Calculator</a>
+                </div>
+            </div>
+
+            <a href="#contact">Contact</a>
+
+            <div class="top-btn">
+                <a class="nav-btn" id="logout-btn">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="fcontact" style="background-image: url(image/contactbg.jpg);">
+        <div class="fcontact container">
+          <div>
+            <h1 class="section-title">Contact Us</h1>
+          </div>
+          <form class="fcontact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" placeholder="Enter your first name" name="first-name" required>
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" placeholder="Enter your last name" name="last-name" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="xxx@gmail.com" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="111-111-1111" name="phone" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message Details</label>
+              <textarea id="message" name="message" placeholder="Tell us about your message..." rows="4" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+      <!-- End Contact Section -->
+
+      <footer>
+        <div id="contact" class="contact-details">
+            <h2 style="margin-bottom: 15px;">Contact Details</h2>
+            <p style="margin-bottom: 30px; color:aqua; font-size: 18px; text-align: center;">If you have any questions
+                or need assistance, feel free to reach us <a href="contact.html" style="font-weight: bold;">Here!</a>
+            </p>
+        </div>
+        <div class="footer-columns">
+            <div class="footer-column">
+                <div class="contact-item">
+                    <div class="icon">
+                        <img src="./image/phone.png">
+                    </div>
+                    <div class="contact-info">
+                        <h1>Phone:</h1>
+                        <h2>+60 11 2354 6152</h2>
+                        <h2>+60 6 1254 7589</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-column">
+                <div class="contact-item">
+                    <div class="icon">
+                        <img src="./image/email.png">
+                    </div>
+                    <div class="contact-info">
+                        <h1>Email Address:</h1>
+                        <h2>upro@gmail.com</h2>
+                        <h2>uprofitness@gmail.com</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-column">
+                <div class="contact-item">
+                    <div class="icon">
+                        <img src="./image/map.png">
+                    </div>
+                    <div class="contact-info">
+                        <h1>Address</h1>
+                        <h2>Kampar, Perak, Malaysia</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p style="font-size: 18px; margin-top: 20px;">&copy; 2024 UPro Fitness.</p>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

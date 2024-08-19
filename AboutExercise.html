@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Exercise</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ebf5ef;
+}
+
+header {
+    background-color: hsl(205, 87%, 29%);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+main {
+    padding: 2em;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 25px;
+}
+
+
+.nav-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.content {
+    display:none;
+    padding: 20px;
+    
+}
+
+.content-paragraph {
+    flex: 1; 
+    margin: 0;
+}
+
+.content.visible {
+    display: block;
+}
+
+.food-detail{
+    flex: 1;
+}
+.exercise-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: rgb(225, 236, 227);
+    margin-bottom: 20px;
+}
+
+.exercise-item img {
+    max-width: 150px; /* Adjust as needed */
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px; /* Space between image and text */
+}
+
+.hidden {
+    display: none;
+}
+
+.btn-back{
+    color: #bdd8db;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercise</h1>
+        <a href="HealthTips.html" class="btn-back">Back</a>
+    </header>
+    <main>
+        <div class="nav-buttons">
+            <button id="Aerobic-btn">Aerobic Exercise</button>
+            <button id="Anaerobic-btn">Anaerobic Exercise</button>
+        </div>
+
+      
+        <section id="Aerobic-content" class="content ">
+            <h2>Aerobic Exercise</h2>
+            <div class="exercise-item">
+                <img src="./image/jogging.jpeg" alt="jogging">
+                <div class="exercise-details">
+                <h3>Jogging</h3>
+                <button onclick="toggleInfo('jogging')">Read More</button>
+                <div id="jogging-info" class="hidden">
+                    <p>Jogging is a moderate-intensity aerobic exercise involving a steady, comfortable running pace. It is widely recognized for its cardiovascular benefits, including improving heart health, enhancing lung capacity, and boosting overall endurance. Regular jogging helps in weight management, reduces stress, and promotes mental well-being by releasing endorphins. It is an accessible and low-cost activity that can be done in various settings, such as parks or neighborhoods. With its numerous health benefits and simplicity, jogging is a popular choice for maintaining fitness and improving overall health.</p>
+                </div>
+            </div>
+            </div>
+            <div class="exercise-item">
+                <img src="./image/swimming7.jpeg" alt="swimming">
+                <div class="exercise-details">
+                <h3>Swimming</h3>
+                <button onclick="toggleInfo('swimming')">Read More</button>
+                <div id="swimming-info" class="hidden">
+                    <p>Swimming is a full-body exercise that combines cardiovascular and muscular endurance, offering a comprehensive workout. It involves moving through water using various strokes, such as freestyle, breaststroke, backstroke, and butterfly. Swimming provides a low-impact workout that is gentle on the joints while effectively building strength, flexibility, and aerobic capacity. It improves cardiovascular health, enhances muscle tone, and boosts overall endurance. Additionally, swimming can aid in stress relief and improve mental well-being. Suitable for all ages and fitness levels, swimming is both a versatile exercise and a relaxing activity.</p>
+                </div>
+            </div>
+            </div>
+            <div class="exercise-item">
+                <img src="./image/cycling.jpg" alt="cycling">
+                <div class="exercise-details">
+                <h3>Cycling</h3>
+                <button onclick="toggleInfo('cycling')">Read More</button>
+                <div id="cycling-info" class="hidden">
+                    <p>Cycling is a dynamic and versatile aerobic exercise that involves riding a bicycle for transportation, recreation, or fitness. It effectively boosts cardiovascular health, strengthens lower body muscles, and improves endurance. Cycling is a low-impact activity, making it gentle on the joints while providing a robust workout. It also aids in weight management, enhances mental well-being by reducing stress, and can be done both outdoors on roads or trails and indoors on stationary bikes. With its accessibility and numerous health benefits, cycling is a popular choice for maintaining overall fitness and a healthy lifestyle.</p>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <section id="Anaerobic-content" class="content hidden">
+            <h2>Anaerobic Exercise</h2>
+            <div class="exercise-item">
+                <img src="./image/Bench-Press-tutorial_chest-scaled.jpeg" alt="Bench-Press">
+                <div class="exercise-details">
+                <h3>Bench Press</h3>
+                <button onclick="toggleInfo('BenchPress')">Read More</button>
+                <div id="BenchPress-info" class="hidden">
+                    <p>The bench press is a popular strength training exercise that targets the upper body, primarily working the pectoral muscles (chest), deltoids (shoulders), and triceps (back of the arms). Performed by lying on a bench and pressing a barbell or dumbbells upward from chest level, it helps build muscle mass and upper body strength. The bench press can be adjusted in various ways, such as by changing the incline or using different grips, to emphasize different muscle groups. It is a fundamental exercise in weightlifting and bodybuilding routines, contributing to overall upper body strength and muscular development.</p>
+                </div>
+            </div>
+            </div>
+            <div class="exercise-item">
+                <img src="./image/la.jpg" alt="Deadlift">
+                <div class="exercise-details">
+                <h3>Deadlift</h3>
+                <button onclick="toggleInfo('Deadlift')">Read More</button>
+                <div id="Deadlift-info" class="hidden">
+                    <p>The deadlift is a key strength training exercise that targets multiple muscle groups, including the lower back, glutes, hamstrings, and core. It involves lifting a barbell or dumbbells from the ground to hip level while maintaining a neutral spine. This compound movement enhances overall strength, improves posture, and increases core stability. The deadlift is fundamental for developing lower body power and functional strength, making it a staple in strength training and bodybuilding programs. Proper form is crucial to avoid injury and maximize the benefits of this powerful exercise.</p>
+                </div>
+            </div>
+            </div>
+            <div class="exercise-item">
+                <img src="./image/squat.jpg" alt="squat">
+                <div class="exercise-details">
+                <h3>Squat</h3>
+                <button onclick="toggleInfo('squat')">Read More</button>
+                <div id="squat-info" class="hidden">
+                    <p>The squat is a fundamental strength training exercise that primarily targets the lower body muscles, including the quadriceps, hamstrings, glutes, and calves. It involves bending at the knees and hips to lower the body, then rising back to a standing position. Squats also engage the core muscles for stability. This compound movement enhances lower body strength, improves flexibility, and supports overall functional fitness. Variations like front squats and goblet squats can target different muscle groups or accommodate different fitness levels. Proper technique is essential to maximize benefits and prevent injury.</p>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function showContent(contentId) {
+    // Hide all content sections
+    document.querySelectorAll('.content').forEach(section => {
+        section.classList.remove('visible');
+    });
+
+    // Show the specified content section
+    document.getElementById(contentId).classList.add('visible');
+}
+
+// Event listeners for buttons
+document.getElementById('Aerobic-btn').addEventListener('click', () => {
+    showContent('Aerobic-content');
+});
+
+document.getElementById('Anaerobic-btn').addEventListener('click', () => {
+    showContent('Anaerobic-content');
+});
+
+
+function toggleInfo(foodId) {
+         var infoElement = document.getElementById(foodId + '-info');
+         if (infoElement.style.display === 'block') {
+            infoElement.style.display = 'none';
+         } else {
+             infoElement.style.display = 'block';
+      }
+    }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+footer {
+    padding: 2rem;
+    background-color: hsl(205, 87%, 29%);
+    color: hsl(0, 0%, 95%);
+    font-size: 1.2rem;
+    /* Slightly reduced font size */
+    margin-top: auto;
+}
+
+.contact-details h2{
+    text-align: center;
+}
+
+
+footer a{
+    color: hsl(35, 100%, 60%);
+    text-decoration: underline;
+    font-style: italic;
+}
+
+footer .footer-columns {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 2000px;
+  }
+ footer .footer-column {
+	flex: 1;
+	min-width: 250px;
+	padding: 0 20px;
+	text-align: left;
+  }
+footer .contact-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 20px 0;
+  }
+  footer .icon {
+	margin-right: 20px;
+  }
+  footer .icon img {
+    width: 70px; 
+    height: 70px; 
+}
+footer .contact-info h1 {
+    font-size: 1.8rem; 
+	font-weight:bold;
+    color: white;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    font-style: normal;
+}
+footer .contact-info h2 {
+    font-size: 1.3rem; 
+	font-weight: 700;
+    color: white;
+    margin: 5px 0;
+    text-align: left;
+    font-family: sans-serif;
+    font-style: normal;
+}
+footer p {
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Header and Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.8rem 3rem;
+    /* Reduced padding */
+    background-color: hsl(205, 87%, 29%);
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+.logo {
+    font-size: 2.8rem;
+    /* Reduced logo size */
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-decoration:none;
+}
+
+.logo span {
+    color: hsl(35, 100%, 60%);
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    color: hsl(35, 100%, 60%);
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    /* Reduced gap between nav items */
+    justify-content: center;
+    align-items:center;
+    margin-right: 5rem;
+}
+
+nav a {
+    font-size: 1.2rem;
+    /* Reduced font size */
+    color: hsl(0, 0%, 95%);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.3rem 0.6rem;
+    /* Reduced padding */
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: hsl(35, 100%, 60%);
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 0.5rem;
+    width: max-content;
+    z-index: 100;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.7rem 1rem;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    background-color: hsl(205, 87%, 35%);
+    transition: opacity 0.2s ease;
+}
+
+.dropdown-content a {
+    font-size: 1rem;
+    /* Reduced font size */
+    margin: 0;
+    opacity: 0;
+    padding: 0.3rem 0;
+    transition: opacity 0.2s ease, color 0.3s;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dropdown:hover .dropdown-content a {
+    opacity: 1;
+}
+
+/* Logout Button */
+.nav-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    /* Reduced padding */
+    background-color: hsl(10, 85%, 55%);
+    color: white;
+    border-radius: 0.8rem;
+    /* Reduced border-radius */
+    font-size: 1.2rem;
+    /* Reduced font size */
+    font-weight: 600;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    background-color: hsl(10, 85%, 45%);
+    color: white;
+    box-shadow: 0 0 12px grey;
+    /* Reduced shadow size */
+}

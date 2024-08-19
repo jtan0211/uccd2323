@@ -1,0 +1,833 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: -apple-system, sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 20%);
+}
+
+h2 {
+    color: aliceblue;
+    text-align: center;
+    font-size: 30px;
+}
+
+p {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer {
+    padding: 2rem;
+    background-color: hsl(205, 87%, 29%);
+    color: hsl(0, 0%, 95%);
+    font-size: 1.2rem;
+    /* Slightly reduced font size */
+    margin-top: auto;
+}
+
+footer a {
+    color: hsl(35, 100%, 60%);
+    text-decoration: underline;
+    font-style: italic;
+}
+
+footer .footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 2000px;
+}
+
+footer .footer-column {
+    flex: 1;
+    min-width: 250px;
+    padding: 0 20px;
+    text-align: left;
+}
+
+footer .contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+footer .icon {
+    margin-right: 20px;
+}
+
+footer .icon img {
+    width: 70px;
+    height: 70px;
+}
+
+footer .contact-info h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+
+footer .contact-info h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    margin: 5px 0;
+    text-align: left;
+}
+
+footer p {
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Header and Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.2rem 3rem;
+    /* Reduced padding */
+    background-color: hsl(205, 87%, 29%);
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+.logo {
+    font-size: 2.8rem;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.logo span {
+    color: hsl(35, 100%, 60%);
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    color: hsl(35, 100%, 60%);
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    font-size: 1.2rem;
+    color: hsl(0, 0%, 95%);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.3rem 0.6rem;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: hsl(35, 100%, 60%);
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 0.5rem;
+    width: max-content;
+    z-index: 100;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.7rem 1rem;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    background-color: hsl(205, 87%, 35%);
+    transition: opacity 0.2s ease;
+}
+
+.dropdown-content a {
+    font-size: 1rem;
+    margin: 0;
+    opacity: 0;
+    padding: 0.3rem 0;
+    transition: opacity 0.2s ease, color 0.3s;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dropdown:hover .dropdown-content a {
+    opacity: 1;
+}
+
+/* Logout Button */
+.nav-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    /* Reduced padding */
+    background-color: hsl(10, 85%, 55%);
+    color: white;
+    border-radius: 0.8rem;
+    /* Reduced border-radius */
+    font-size: 1.2rem;
+    /* Reduced font size */
+    font-weight: 600;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    background-color: hsl(10, 85%, 45%);
+    color: white;
+    box-shadow: 0 0 12px grey;
+    /* Reduced shadow size */
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    /* Reduced padding */
+    background-color: hsl(205, 87%, 29%);
+    color: white;
+    border-radius: 0.8rem;
+    /* Reduced border-radius */
+    font-size: 1rem;
+    /* Reduced font size */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background-color: hsl(205, 87%, 39%);
+}
+
+/* Hero Banner */
+.hero-banner {
+    margin-top: 85px;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: max-content;
+    background-image: url(/image/home.jpg);
+    z-index: 1;
+}
+
+.hero-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(30, 30, 30, 0.603);
+    z-index: -1;
+}
+
+.hero-content {
+    font-size: 32px;
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+
+/* Fitness Programs Slider */
+.fitness-programs {
+    background-color: hsl(0, 0%, 98%);
+    text-align: center;
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: max-content;
+    background-image: url(/image/sec2.jpg);
+    z-index: 1;
+
+}
+
+.fitness-programs::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(30, 30, 30, 0.841);
+    z-index: -1;
+}
+
+.programs-slider {
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.slide {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 500px;
+    height: 320px;
+    border-radius: 10px;
+}
+
+.active {
+    transform: translateX(0);
+}
+
+/* Health Tips */
+.health-tips {
+    flex: 1;
+    padding: 2rem 0;
+    background-color: hsl(0, 0%, 95%);
+    text-align: center;
+    padding: 110px 20px;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: max-content;
+    background-image: url(/image/health.jpg);
+    z-index: 1;
+}
+
+.health-tips::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(30, 30, 30, 0.841);
+    z-index: -1;
+}
+
+.health-image img {
+    width: 500px;
+    height: 320px;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Well-Routine */
+.well-routine {
+    flex: 1;
+    padding: 2rem 0;
+    background-color: hsl(0, 0%, 95%);
+    text-align: center;
+    padding: 110px 20px;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: max-content;
+    background-image: url(/image/routinebg.jpg);
+    z-index: 1;
+}
+
+.well-routine::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(30, 30, 30, 0.841);
+    z-index: -1;
+}
+
+.well-routine img {
+    width: 500px;
+    height: 320px;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Tools Section */
+.tools-section {
+    flex: 1;
+    padding: 2rem 0;
+    background-color: hsl(0, 0%, 95%);
+    text-align: center;
+    padding: 110px 20px;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: max-content;
+    background-image: url(/image/toolsbg.jpg);
+    z-index: 1;
+}
+
+.tools-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(30, 30, 30, 0.682);
+    z-index: -1;
+}
+
+.tools-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.tool {
+    background-color: hsl(205, 87%, 39%);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    margin: 30px 30px;
+}
+
+.tool h3 {
+    margin-bottom: 30px;
+}
+
+.tool img {
+    width: 120px;
+    height: 100px;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.tool .btn {
+    margin-top: 30px;
+    background-color: hsl(35, 100%, 60%);
+
+}
+
+/* Contact Us Section */
+#fcontact {
+    padding: 6rem 0 4rem 0;
+    /* Increased top padding to ensure it's not hidden by the navbar */
+    margin-top: 85px;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: max-content;
+    background-image: url(/image/contactbg.jpg);
+    z-index: 1;
+}
+
+#fcontact::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(30, 30, 30, 0.784);
+    z-index: -1;
+}
+
+.fcontact.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: rgb(222, 232, 242);
+    margin-bottom: 2rem;
+}
+
+.fcontact-form {
+    background-color: #0066cc;
+    /* Blue background for the form */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    flex: 1;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: white;
+    /* White labels for better contrast */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f0f8ff;
+    /* Light blue background for inputs */
+    margin-bottom: 1rem;
+}
+
+button[type="submit"] {
+    background-color: #ff5733;
+    /* Orange button to match the theme */
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+button[type="submit"]:hover {
+    background-color: #e04e1e;
+    /* Darker shade on hover */
+}
+
+/*BMI Section */
+#bmi {
+    padding: 6rem 0 4rem 0;
+    margin-top: 85px;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: max-content;
+    background-image:url(/image/bmibg.jpg);
+    z-index: 1;
+}
+
+#bmi::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(30, 30, 30, 0.784);
+    z-index: -1;
+}
+
+.container.bmi {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Title and Explanation */
+.title {
+    font-size: 2.5rem;
+    color: #0066cc;
+    margin-bottom: 1.5rem;
+}
+
+.explanation {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+/* Form Inputs */
+.calculator .input {
+    text-align: left;
+}
+
+.calculator .input label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.calculator .input input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #e6f2ff;
+    /* Light blue background for inputs */
+    margin-bottom: 1rem;
+}
+
+/* Gender Selection */
+.gender {
+    text-align: left;
+}
+
+.gender label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #333;
+}
+
+.gender-item {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.gender-item input {
+    margin-right: 0.5rem;
+}
+
+/* Buttons */
+.button {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.button button {
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+
+.button button[type="reset"] {
+    background-color: #ff5733;
+    /* Orange color for reset button */
+}
+
+.button button[type="submit"] {
+    background-color: #0066cc;
+    /* Blue color for submit button */
+}
+
+.button button:hover {
+    opacity: 0.9;
+}
+
+/* Output Section */
+.output {
+    margin-top: 2rem;
+}
+
+.output h3 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.output span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0066cc;
+}
+
+.output p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 1rem;
+}
+
+/* Error Message */
+.error {
+    color: red;
+    margin-top: 1rem;
+}
+
+/* BMI Scale */
+.bmi-scale {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.bmi-scale p {
+    color: #333;
+}
+
+.bmi-scale div {
+    flex: 1;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin: 0 0.5rem;
+}
+
+.bmi-scale-h {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+
+/* Colors for BMI Categories */
+.bmi-scale div:nth-child(1) {
+    background-color: #ffcccb;
+    /* Light red for Underweight */
+}
+
+.bmi-scale div:nth-child(2) {
+    background-color: #c2f0c2;
+    /* Light green for Normal */
+}
+
+.bmi-scale div:nth-child(3) {
+    background-color: #ffeb99;
+    /* Light yellow for Overweight */
+}
+
+.bmi-scale div:nth-child(4) {
+    background-color: #ffb3b3;
+    /* Light pink for Obese */
+}
+
+.bmi-scale div:nth-child(5) {
+    background-color: #ff8080;
+    /* Light red for Very Obese */
+}
+
+/* BMR Section */
+#bmr {
+    padding: 8rem 0 4rem 0;
+    margin-top: 85px;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: max-content;
+    background-image: url(/image/bmrbg.jpg);
+    z-index: 1;
+}
+
+#bmr::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(30, 30, 30, 0.784);
+    z-index: -1;
+}
+
+.container.bmr {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bmi-scale {
+        flex-direction: column;
+    }
+
+    .bmi-scale div {
+        margin-bottom: 1rem;
+    }
+
+    .button {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .button {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
+}

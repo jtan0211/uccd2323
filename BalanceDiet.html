@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food and Drinks</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ebf5ef;
+}
+
+header {
+    background-color: hsl(205, 87%, 29%);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 25px;
+}
+
+
+.nav-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.content {
+    display:none;
+    padding: 20px;
+    
+}
+
+.content-paragraph {
+    flex: 1; 
+    margin: 0;
+}
+
+.content.visible {
+    display: block;
+}
+
+.food-detail{
+    flex: 1;
+}
+.food-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: rgb(225, 236, 227);
+    margin-bottom: 20px;
+}
+
+.food-item img {
+    max-width: 150px; /* Adjust as needed */
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px; /* Space between image and text */
+}
+
+.hidden {
+    display: none;
+}
+
+.onclick-button{
+    background-color: #72ba7d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+
+}
+
+.btn-back{
+    color: #bdd8db;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Healthy Foods</h1>
+        <a href="HealthTips.html" class="btn-back">Back</a>
+    </header>
+    
+    <main>
+     
+        <div class="nav-buttons">
+            <button id="Carbohydrate-btn">Carbohydrate</button>
+            <button id="Proteins-btn">Proteins</button>
+            <button id="Vegetables-btn">Vegetables</button>
+            <button id="Fruits-btn">Fruits</button>
+            <button id="HealthyFats-btn">Healthy Fats</button>
+        </div>
+
+      
+        <section id="carbon-content" class="content ">
+            <h2>Carbohydrate</h2>
+            <div class="food-item">
+                <img src="./image/corn.jpeg" alt="Corn">
+                <div class="food-details">
+                <h3>Corn</h3>
+                <button onclick="toggleInfo('corn')" class="onclick-button">Read More</button>
+                <div id="corn-info" class="hidden">
+                    <p class="content-paragraph">Corn, also known as maize, is a widely grown cereal grain that serves as a staple food worldwide. Originally domesticated in ancient Mesoamerica, it is rich in carbohydrates and fiber, providing a key energy source. Corn is also high in essential nutrients, including vitamins C and B, and minerals such as magnesium and potassium. It contains antioxidants like lutein and zeaxanthin, which support eye health.</p>
+                </div>
+            </div>
+            </div>
+            <div class="food-item">
+                <img src="./image/v.jpg" alt="Brown Rice">
+                <div class="food-details">
+                <h3>Brown Rice</h3>
+                <button onclick="toggleInfo('brown-rice')" class="onclick-button">Read More</button>
+                <div id="brown-rice-info" class="hidden">
+                    <p>Brown rice is a whole grain that retains its bran and germ layers, making it more nutritious than white rice. It is a valuable source of complex carbohydrates and dietary fiber, which aid in digestion and help maintain steady blood sugar levels. Brown rice is rich in essential nutrients, including B vitamins, magnesium, phosphorus, and antioxidants. It supports heart health, weight management, and overall well-being. With its nutty flavor and chewy texture, brown rice is a versatile, wholesome alternative to refined grains in various dishes.</p>
+                </div>
+            </div>
+            </div>
+            <div class="food-item">
+                <img src="./image/618.jpg" alt="Potato">
+                <div class="food-details">
+                <h3>Potato</h3>
+                <button onclick="toggleInfo('potato')" class="onclick-button">Read More</button>
+                <div id="potato-info" class="hidden">
+                    <p>Potatoes are a versatile and widely consumed tuber that are rich in carbohydrates, primarily in the form of starch. They are an excellent source of vitamin C, vitamin B6, potassium, and dietary fiber, which contribute to overall health, including digestive health and heart function. Potatoes come in various types, including russet, red, and fingerling, each suited to different cooking methods. They can be baked, boiled, mashed, or fried, making them a staple in many cuisines. Despite their reputation, when prepared healthily, potatoes can be a nutritious and satisfying part of a balanced diet.</p>
+                </div>
+            </div>
+        </div>
+        <div class="food-item">
+            <img src="./image/oats.jpg" alt="Potato">
+            <div class="food-details">
+            <h3>Oats</h3>
+            <button onclick="toggleInfo('oat')" class="onclick-button">Read More</button>
+            <div id="oat-info" class="hidden">
+                <p>Oats are a versatile and nutritious whole grain commonly used as a breakfast food. They are rich in fiber, particularly beta-glucan, which can help lower cholesterol and improve heart health. Oats also provide essential vitamins and minerals, including B vitamins, iron, and magnesium. They come in various forms, such as steel-cut, rolled, and instant, each with different cooking times and textures. Oats can be enjoyed in many ways, including oatmeal, granola, and baked goods. Their mild flavor and ability to absorb liquids make them a popular choice for both sweet and savory dishes.</p>
+            </div>
+        </div>
+    </div>
+        </section>
+
+        <section id="Proteins-content" class="content hidden">
+            <h2>Proteins</h2>
+            <div class="food-item">
+                <img src="./image/chickenbreast.jpg" alt="Chicken Breast">
+                <div class="food-details">
+                <h3>Chicken Breast</h3>
+                <button onclick="toggleInfo('chicken-breast')" class="onclick-button">Read More</button>
+                <div id="chicken-breast-info" class="hidden">
+                    <p>Chicken breast is a lean cut of poultry that is highly regarded for its high protein content and low fat levels. It is a rich source of essential nutrients, including B vitamins (particularly niacin and B6), phosphorus, and selenium. This versatile meat is prized for its mild flavor and tender texture, making it suitable for a wide range of cooking methods, including grilling, baking, and sautéing. Chicken breast is a popular choice among those seeking to build muscle, manage weight, or maintain a healthy diet due to its low fat and high protein profile.</p>
+                </div>
+            </div>
+            </div>
+            <div class="food-item">
+                <img src="./image/salmon.jpg" alt="Salmon">
+                <div class="food-details">
+                <h3>Salmon</h3>
+                <button onclick="toggleInfo('salmon')" class="onclick-button">Read More</button>
+                <div id="salmon-info" class="hidden">
+                    <p>Salmon is a highly nutritious fish known for its rich flavor and tender texture. It is an excellent source of high-quality protein and is particularly renowned for its high content of omega-3 fatty acids, which support heart health, reduce inflammation, and enhance brain function. Salmon is also rich in vitamins D and B12, as well as minerals like selenium and potassium. Whether enjoyed grilled, baked, or raw, salmon is a versatile and healthful addition to various meals, offering numerous benefits for overall wellness.</p>
+                </div>
+            </div>
+            </div>
+            <div class="food-item">
+                <img src="./image/beef.jpg" alt="Chicken Breast">
+                <div class="food-details">
+                <h3>Beef</h3>
+                <button onclick="toggleInfo('Beef')" class="onclick-button">Read More</button>
+                <div id="Beef-info" class="hidden">
+                    <p>Beef is the meat obtained from cattle, commonly consumed as a major protein source worldwide. It is rich in high-quality protein, essential amino acids, vitamins (especially B12), and minerals like iron and zinc. Beef comes in various cuts, each with different textures and flavors, such as steak, ground beef, and roasts. It can be cooked in numerous ways, including grilling, roasting, and stewing. While nutritious, beef can be high in saturated fats and cholesterol, so it's often recommended to consume it in moderation and opt for lean cuts when possible.</p>
+                </div>
+            </div>
+            </div>
+            <div class="food-item">
+                <img src="./image/eggs.jpg" alt="Chicken Breast">
+                <div class="food-details">
+                <h3>Egg</h3>
+                <button onclick="toggleInfo('egg')" class="onclick-button">Read More</button>
+                <div id="egg-info" class="hidden">
+                    <p>Egg is a nutritious food produced by birds, commonly chickens, and is a staple in many diets worldwide. It consists of a protective shell, a white (albumen), and a yolk. Eggs are rich in high-quality protein, vitamins (such as B12 and riboflavin), and minerals (including selenium and choline). They are versatile in cooking, used in various dishes like omelets, baked goods, and as a binding agent. Eggs can be prepared in numerous ways, such as boiling, frying, and poaching. They are also valued for their relatively low cost and wide availability.</p>
+            </div>
+            </div>
+        </section>
+
+        <section id="Vegetables-content" class="content hidden">
+            <h2>Vegetables</h2>
+            <div class="food-item">
+                <img src="./image/carrot.jpeg" alt="carrot">
+                <div class="food-details">
+                <h3>Carrot</h3>
+                <button onclick="toggleInfo('carrot')" class="onclick-button">Read More</button>
+                <div id="carrot-info" class="hidden">
+                    <p>Carrots are crunchy, vibrant root vegetables that are well-known for their high beta-carotene content, which the body converts into vitamin A. This essential vitamin supports eye health, immune function, and skin health. Carrots are also a good source of dietary fiber, vitamin K, and several B vitamins. Their natural sweetness and versatility make them a popular choice for both raw snacking and cooking. Whether enjoyed in salads, soups, or as a side dish, carrots offer a nutritious boost to a balanced diet.</p>
+                </div>
+            </div>
+            </div>
+            <div class="food-item">
+                <img src="./image/blanched-broccoli-florets.jpg" alt="Broccoli">
+                <div class="food-details">
+                <h3>Broccoli</h3>
+                <button onclick="toggleInfo('broccoli')" class="onclick-button">Read More</button>
+                <div id="broccoli-info" class="hidden">
+                    <p>Broccoli is a nutrient-dense vegetable known for its health benefits and versatility. It is rich in vitamins C and K, folate, and dietary fiber, making it excellent for immune support, bone health, and digestive health. Broccoli also contains powerful antioxidants and phytochemicals, such as sulforaphane, which may help reduce inflammation and support overall health. Its mild, slightly bitter flavor makes it a popular choice for steaming, stir-frying, or adding to various dishes, contributing to a balanced and nutritious diet.</p>
+                </div>
+            </div>
+            </div>
+            <div class="food-item">
+                <img src="./image/mushroom.jpeg" alt="Broccoli">
+                <div class="food-details">
+                <h3>Mushroom</h3>
+                <button onclick="toggleInfo('mushroom')" class="onclick-button">Read More</button>
+                <div id="mushroom-info" class="hidden">
+                    <p>Mushrooms are fungi with a variety of species that are widely used in cooking and have diverse flavors and textures. They are low in calories and fat, but rich in vitamins (such as B vitamins), minerals (including selenium and potassium), and antioxidants. Mushrooms can be enjoyed in many forms, including fresh, dried, or cooked, and are featured in a range of dishes from soups to salads. Some varieties are also used for their medicinal properties. They come in different types, such as button, shiitake, and portobello, each offering unique culinary benefits. </p>
+                </div>
+            </div>
+            </div>
+            <div class="food-item">
+                <img src="./image/tomatoes2-e.jpg" alt="Broccoli">
+                <div class="food-details">
+                <h3>Tomato</h3>
+                <button onclick="toggleInfo('tomato')" class="onclick-button">Read More</button>
+                <div id="tomato-info" class="hidden">
+                    <p>A tomato is a fleshy fruit commonly used as a vegetable in cooking. It is rich in vitamins (particularly vitamin C), minerals (such as potassium), and antioxidants like lycopene, which is linked to various health benefits. Tomatoes come in various colors, shapes, and sizes, including red, yellow, and cherry types. They are versatile and used in numerous dishes, from salads and sauces to soups and stews. Their tangy flavor and juiciness make them a popular ingredient in many cuisines around the world.</p>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section id="Fruits-content" class="content hidden">
+            <h2>Fruits</h2>
+            <div class="food-item">
+                <img src="./image/types-of-berries.jpg" alt="Berries">
+                <div class="food-details">
+                <h3>Berries</h3>
+                <button onclick="toggleInfo('berries')" class="onclick-button">Read More</button>
+                <div id="berries-info" class="hidden">
+                    <p>Berries are small, vibrant fruits packed with flavor and nutrients. They are renowned for their high content of antioxidants, such as vitamin C and flavonoids, which help combat oxidative stress and inflammation. Berries are also rich in dietary fiber, which supports digestive health and helps regulate blood sugar levels. Popular varieties include strawberries, blueberries, raspberries, and blackberries. Their natural sweetness and versatility make them ideal for fresh consumption, as well as for use in smoothies, desserts, and salads. Overall, berries are a nutritious and delicious addition to a healthy diet.</p>
+                </div>
+            </div>
+        </div>
+            <div class="food-item">
+                <img src="./image/apples-101-about-1440x810.jpg" alt="Apples">
+                <div class="food-details">
+                <h3>Apples</h3>
+                <button onclick="toggleInfo('apples')" class="onclick-button">Read More</button>
+                <div id="apples-info" class="hidden">
+                    <p>Apples are crisp, juicy fruits known for their refreshing flavor and numerous health benefits. They are a good source of dietary fiber, particularly pectin, which supports digestive health and helps regulate blood sugar levels. Apples also provide vitamin C, which boosts the immune system and promotes skin health. With various varieties available, such as Fuji, Gala, and Granny Smith, apples can be enjoyed fresh, cooked, or as part of various dishes and beverages. Their versatility and nutrient profile make apples a popular and nutritious choice in a balanced diet.</p>
+                </div>
+            </div>
+            </div>
+            <div class="food-item">
+                <img src="./image/orange.jpg" alt="Berries">
+                <div class="food-details">
+                <h3>Orange</h3>
+                <button onclick="toggleInfo('orange')" class="onclick-button">Read More</button>
+                <div id="orange-info" class="hidden">
+                    <p>Orange is a citrus fruit known for its bright color and refreshing, tangy flavor. It is an excellent source of vitamin C, which supports the immune system and skin health. Oranges also provide dietary fiber, antioxidants, and other vitamins and minerals, such as potassium and folate. They can be eaten fresh, juiced, or used in cooking and baking. The fruit's sweetness and acidity make it a popular choice for snacks, beverages, and a variety of dishes.</p>
+                </div>
+            </div>
+        </div>
+        <div class="food-item">
+            <img src="./image/watermelon.jpg" alt="Apples">
+            <div class="food-details">
+            <h3>Watermelon</h3>
+            <button onclick="toggleInfo('watermelon')" class="onclick-button">Read More</button>
+            <div id="watermelon-info" class="hidden">
+                <p>Watermelon is a large, refreshing fruit known for its high water content, making it hydrating and cooling. It has a sweet, juicy flesh that is typically red or pink, with a green rind. Watermelon is a good source of vitamins A and C, as well as antioxidants like lycopene. It’s often enjoyed fresh, in fruit salads, or as a chilled beverage. Its high water content and natural sweetness make it a popular choice for summer and warm weather.</p>
+            </div>
+        </div>
+        </div>
+        <div class="food-item">
+            <img src="./image/kiwi.jpg" alt="Apples">
+            <div class="food-details">
+            <h3>Kiwi</h3>
+            <button onclick="toggleInfo('kiwi')" class="onclick-button">Read More</button>
+            <div id="kiwi-info" class="hidden">
+                <p>A kiwi, also known as a kiwi fruit or Chinese gooseberry, is a small, brown, fuzzy fruit with vibrant green flesh and tiny black seeds. It has a tangy-sweet flavor and is rich in vitamin C, vitamin K, and dietary fiber. Kiwis also contain antioxidants like lutein and zeaxanthin, which support eye health. They can be eaten fresh, added to fruit salads, or used as a topping for desserts and smoothies. The fruit's unique taste and nutritional benefits make it a popular and versatile choice.</p>
+            </div>
+        </div>
+        </div>
+        </section>
+
+        <section id="HealthyFats-content" class="content hidden">
+            <h2>Healthy Fats</h2>
+            <div class="food-item">
+                <img src="./image/avocado.jpeg" alt="Avocado">
+                <div class="food-details">
+                <h3>Avocado</h3>
+                <button onclick="toggleInfo('avocado')" class="onclick-button">Read More</button>
+                <div id="avocado-info" class="hidden">
+                    <p>Avocado is a creamy, nutrient-rich fruit celebrated for its healthy fat content, primarily monounsaturated fats, which support heart health and improve cholesterol levels. It is also a good source of dietary fiber, vitamins E, C, B6, and folate, and minerals like potassium. Avocado’s smooth texture and mild flavor make it versatile for various culinary uses, from salads and sandwiches to smoothies and guacamole. Its rich nutrient profile and beneficial fats make avocado a valuable addition to a balanced and healthful diet.</p>
+                </div>
+            </div>
+            </div>
+            <div class="food-item">
+                <img src="./image/nuts.jpg" alt="Nuts">
+                <div class="food-details">
+                <h3>Nuts</h3>
+                <button onclick="toggleInfo('nuts')" class="onclick-button">Read More</button>
+                <div id="nuts-info" class="hidden">
+                    <p>Nuts are small, nutrient-dense foods known for their rich content of healthy fats, protein, and essential vitamins and minerals. They are a great source of monounsaturated and polyunsaturated fats, which support heart health, and contain significant amounts of fiber, antioxidants, vitamin E, magnesium, and selenium. Common types of nuts include almonds, walnuts, cashews, and pistachios. Their crunchy texture and diverse flavors make them a versatile addition to snacks, salads, and dishes. Nuts contribute to overall health by supporting cardiovascular health, managing weight, and providing sustained energy.</p>
+                </div>
+            </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        function showContent(contentId) {
+    // Hide all content sections
+    document.querySelectorAll('.content').forEach(section => {
+        section.classList.remove('visible');
+    });
+
+    // Show the specified content section
+    document.getElementById(contentId).classList.add('visible');
+}
+
+// Event listeners for buttons
+document.getElementById('Carbohydrate-btn').addEventListener('click', () => {
+    showContent('carbon-content');
+});
+
+document.getElementById('Proteins-btn').addEventListener('click', () => {
+    showContent('Proteins-content');
+});
+
+document.getElementById('Vegetables-btn').addEventListener('click', () => {
+    showContent('Vegetables-content');
+});
+
+document.getElementById('Fruits-btn').addEventListener('click', () => {
+    showContent('Fruits-content');
+});
+
+document.getElementById('HealthyFats-btn').addEventListener('click', () => {
+    showContent('HealthyFats-content');
+});
+
+function toggleInfo(foodId) {
+         var infoElement = document.getElementById(foodId + '-info');
+         if (infoElement.style.display === 'block') {
+            infoElement.style.display = 'none';
+         } else {
+             infoElement.style.display = 'block';
+      }
+    }
+
+    </script>
+</body>
+</html>

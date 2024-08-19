@@ -1,0 +1,348 @@
+body {
+    padding-top: 80px;
+    margin: 0;
+    background-color:hsl(205, 64%, 68%); 
+    color: hsl(35, 100%, 90%);
+}
+
+.highlighted-text {
+    color: hsl(35, 100%, 60%); 
+}
+
+.separator-line {
+    height: 15px;
+    background-color:hsl(35, 100%, 60%);
+    margin: 0;
+}
+
+.fixed-navbar{
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    z-index: 99;
+}
+
+.navbar {
+    margin-top: 1.3rem;
+    line-height: 0.5;
+    padding: 10px 20px;
+    transition: black;
+}
+
+.navbar-brand {
+    color: hsl(35, 100%, 60%); 
+    font-size: 36px;
+    font-weight: 700;
+    font-style: italic; 
+    margin-left: -60px;
+}
+
+.nav-link {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-item {
+    margin-left: 30px;
+}
+
+.navbar.scrolled {
+    background-color: black; 
+}
+
+.sig-intro {
+    position: relative;
+    height: 100vh; /* Ensure the section covers the full viewport height */
+    overflow: hidden;
+}
+
+.img-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.img-about {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.sig-intro-content {
+    position: relative; /* Make sure the content is positioned above the background image */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+    z-index: 1; /* Ensure the content is above the background image */
+}
+
+.sig-intro-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 80px;
+    text-shadow: 2px 2px 4px black;
+    color: hsl(40, 11%, 95%);
+}
+
+.sig-intro-subtitle {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px black;
+    color: hsl(35, 100%, 90%);
+}  
+
+.sig-section {
+    background-color: hsl(205, 87%, 35%);
+    padding: 3rem 1.5rem; /* Increased padding for better spacing */
+    text-align: center;
+   
+}
+
+.sig-content h1 {
+    color: hsla(249, 47%, 97%, 0.983);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.container h2{
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: underline;
+    margin-bottom: 2rem;
+}
+
+ .container h3 {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: justify;
+    font-size: 30px;
+    color: hsl(35, 100%, 90%);
+}
+
+.uniform-size {
+    width: 100%; 
+    height: 100%;
+    border: 2px;
+    object-fit: cover;
+    filter: brightness(70%); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hover-enlarge:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-details h2{
+    text-align: center;
+}
+
+
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+
+footer {
+    padding: 2rem;
+    background-color: hsl(205, 87%, 29%);
+    color: hsl(0, 0%, 95%);
+    font-size: 1.2rem;
+    /* Slightly reduced font size */
+    margin-top: auto;
+}
+
+footer a{
+    color: hsl(35, 100%, 60%);
+    text-decoration: underline;
+    font-style: italic;
+}
+
+footer .footer-columns {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 2000px;
+  }
+ footer .footer-column {
+	flex: 1;
+	min-width: 250px;
+	padding: 0 20px;
+	text-align: left;
+  }
+footer .contact-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 20px 0;
+  }
+  footer .icon {
+	margin-right: 20px;
+  }
+  footer .icon img {
+    width: 70px; 
+    height: 70px; 
+}
+footer .contact-info h1 {
+    font-size: 1.8rem; 
+	font-weight:bold;
+    color: white;
+    margin-bottom: 10px;
+}
+footer .contact-info h2 {
+    font-size: 1.3rem; 
+	font-weight: 700;
+    color: white;
+    margin: 5px 0;
+    text-align: left;
+}
+footer p {
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Header and Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.8rem 3rem;
+    /* Reduced padding */
+    background-color: hsl(205, 87%, 29%);
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+.logo {
+    font-size: 2.8rem;
+    /* Reduced logo size */
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.logo span {
+    color: hsl(35, 100%, 60%);
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    color: hsl(35, 100%, 60%);
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    /* Reduced gap between nav items */
+    justify-content: center;
+    align-items:center;
+}
+
+nav a {
+    font-size: 1.2rem;
+    /* Reduced font size */
+    color: hsl(0, 0%, 95%);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.3rem 0.6rem;
+    /* Reduced padding */
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: hsl(35, 100%, 60%);
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 0.5rem;
+    width: max-content;
+    z-index: 100;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.7rem 1rem;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    background-color: hsl(205, 87%, 35%);
+    transition: opacity 0.2s ease;
+}
+
+.dropdown-content a {
+    font-size: 1rem;
+    /* Reduced font size */
+    margin: 0;
+    opacity: 0;
+    padding: 0.3rem 0;
+    transition: opacity 0.2s ease, color 0.3s;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dropdown:hover .dropdown-content a {
+    opacity: 1;
+}
+
+/* Logout Button */
+.nav-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    /* Reduced padding */
+    background-color: hsl(10, 85%, 55%);
+    color: white;
+    border-radius: 0.8rem;
+    /* Reduced border-radius */
+    font-size: 1.2rem;
+    /* Reduced font size */
+    font-weight: 600;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    background-color: hsl(10, 85%, 45%);
+    color: white;
+    box-shadow: 0 0 12px grey;
+    /* Reduced shadow size */
+}

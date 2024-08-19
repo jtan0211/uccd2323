@@ -1,0 +1,364 @@
+table {
+    text-align:left;
+    margin: 10 10 10 10;
+    width: 600px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 3px solid rgb(22, 6, 123);
+    height: 30px;
+    padding: 10px;
+}
+
+
+th:first-child {
+    width: 20%; 
+    text-align: center;
+    color: rgb(22, 6, 123);
+}
+
+td {
+    width: 300px; 
+    font-weight: bold;
+    color: rgb(22, 6, 123);
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500px;
+    font-size: 40px;
+    font-style: italic;
+    text-align: left;
+}
+
+.gif {
+    vertical-align: middle;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    font-style: italic;
+}
+
+body {
+    background-image: url(../image/calendar.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.table-wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    margin-bottom: 2px;
+    font-size: 12px;
+    width: 300px;
+}
+
+
+iframe.video {
+    height: 200px;
+    width: 300px;
+    float: left;
+}
+
+button {
+    height: 30px;
+    width: 120px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: aqua;
+    color: black;
+}
+
+main {
+    padding: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: rgb(251, 248, 248);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 25px;
+}
+.middle {
+    margin: 20px;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 10px;
+    margin: auto;
+    padding: 10px;
+    width: 800px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.column {
+    width: 48%;
+    opacity: 0; /*Let the font opacity become transform*/
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.left-slide {
+    font-size: 20px;
+    animation-name: slideInFromLeft;
+    
+}
+
+.right-slide {
+    font-size: 20px;
+    animation-name: slideInFromRight;
+}
+
+
+
+.contact-details h2{
+    text-align: center;
+    font-family: sans-serif;
+    font-style: normal;
+}
+
+footer {
+    padding: 2rem;
+    background-color: hsl(205, 87%, 29%);
+    color: hsl(0, 0%, 95%);
+    font-size: 1.2rem;
+    /* Slightly reduced font size */
+    margin-top: auto;
+    
+}
+
+footer a {
+    color: hsl(35, 100%, 60%);
+    text-decoration: underline;
+    font-style: italic;
+}
+
+footer .footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 2000px;
+}
+
+footer .footer-column {
+    flex: 1;
+    min-width: 250px;
+    padding: 0 20px;
+    text-align: left;
+}
+
+footer .contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+footer .icon {
+    margin-right: 20px;
+}
+
+footer .icon img {
+    width: 70px;
+    height: 70px;
+}
+
+footer .contact-info h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    font-style: normal;
+}
+
+footer .contact-info h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    margin: 5px 0;
+    text-align: left;
+    font-family: sans-serif;
+    font-style: normal;
+}
+
+footer p {
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Header and Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.8rem 3rem;
+    /* Reduced padding */
+    background-color: hsl(205, 87%, 29%);
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+.logo {
+    font-size: 2.8rem;
+    /* Reduced logo size */
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.logo span {
+    color: hsl(35, 100%, 60%);
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    color: hsl(35, 100%, 60%);
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    /* Reduced gap between nav items */
+    justify-content: center;
+    align-items:center;
+    margin-right: 5rem;
+}
+
+nav a {
+    font-size: 1.2rem;
+    /* Reduced font size */
+    color: hsl(0, 0%, 95%);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.3rem 0.6rem;
+    /* Reduced padding */
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: hsl(35, 100%, 60%);
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 0.5rem;
+    width: max-content;
+    z-index: 100;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.7rem 1rem;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    background-color: hsl(205, 87%, 35%);
+    transition: opacity 0.2s ease;
+}
+
+.dropdown-content a {
+    font-size: 1rem;
+    /* Reduced font size */
+    margin: 0;
+    opacity: 0;
+    padding: 0.3rem 0;
+    transition: opacity 0.2s ease, color 0.3s;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dropdown:hover .dropdown-content a {
+    opacity: 1;
+}
+
+/* Logout Button */
+.nav-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    /* Reduced padding */
+    background-color: hsl(10, 85%, 55%);
+    color: white;
+    border-radius: 0.8rem;
+    /* Reduced border-radius */
+    font-size: 1.2rem;
+    /* Reduced font size */
+    font-weight: 600;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    background-color: hsl(10, 85%, 45%);
+    color: white;
+    box-shadow: 0 0 12px grey;
+    /* Reduced shadow size */
+}
+
+/*below @keyframes declares animation*/
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
